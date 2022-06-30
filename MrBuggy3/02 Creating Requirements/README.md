@@ -1,78 +1,78 @@
 
-## Creating requirements for the app
-The following served as a test basis that allowed me to create test conditions and test cases as a result.
-1. The app consists of the client app and the server app.
-1. There need to be **three** versions of the client app: demo, final and public.
-2. The demo includes only one task, different from the tasks available in the final and public versions.
-3. The public version will be released after the Cup has ended.
-4. The three versions differ only in terms of the number of tasks: 1 for the demo, 15 for the other two.
-5. The app needs to run on
-   * Windows 7/8/8.1 - the client app;
-   * Windows 7 - the server app.
-6. The client app has to deliver data to the server app in the form of a text file, either directly via the app, or by being exported from the client app and then imported by the server app.
-7. The client app has to allow the users to find one defect in each exercise/task and report it.
-8. The client app needs to generate an event log.
-9. All exercises/tasks have to be implented in the app.
-10. The exercises/tasks need to include functional, usability or security defects.
-11. The exercises/tasks have to be shown in a random order.
-11. The client app has to work in two modes:
-    * team: captain and team member modes;
-    * individual: player mode.
-15. Reporting defects has to be blocked in the team member mode.
-13. The app cannot lose any data in case of a sudden crash.
-14. A backup has to be created each time the "Report a defect" is clicked. The backup needs to be in a text format.
-15. If a loss of connection occurs, the user should still be able to use the app.
-16. The whole GUI needs to be in Polish.
-17. The app window should be divided into two parts: "Zadania" (Exercises/Tasks) and "Menu boczne" (Side menu).
-18. The side menu has to consist of boxes displaying the following:  
-    * time left to the end of the round (the final version),
-    * the exercise/task no.,
-    * "Opis zadania" - the description of the exercise/task, 
-    * "Lista zadań" list of tasks/exercises,
-    * navigation buttons: "Następne" (Next) and "Poprzednie" (Previous),
-    * "Zaraportuj defekt" (Report a bug) button,
-    * "Zakończ" (Finish) button.
-19. The exercise/task window has to show the current exercise/task being done.
-20. The app window must include a MrBuggy 3 icon.
-21. "Opis zadania" should also include the number of possible points to score.
-22. "Lista zadań" has to allow for navigation between exercsises/tasks and also to clearly show the current task, tasks without an answer and those which have been answered.
-23. "Zakończ" button has to export all the answers to the server/a text file. This action cannot be undone and can be done only once. This action needs to be confirmed in a separate message.
-24. The server app has to be accessed by the command line or a GUI and is dedicated only to the jury of the tournament.
-25. The server app has to:  
-    * fetch reports of all the teams and users;
-    * keep the scoreboard divided into team and individual scores;
-    * automatically check the reported defects;
-    * allow the jury to manually change the score;
-    * show the general rank on a separate monitor;
-    * allow for generating an overall report that includes the user's position in the rank, the name of the user and its team, the number of points given for each task/exercise done by each member and team and the sum of points scored by each team member and the whole team;  
-29. Log all events (i.e. [un]successfully received report, or correctly reviewed report) in the server log.
-30. The interface's response time should be shorter than 1 sec.
-31. The general report should be generated under 15 sec.
-32. The backup copy of the client app should not exceed 2MB.
-33. The client app cannot use more than 100MB of RAM.
-33. The server app needs to be able to receive 50 reports at once.
-34. The access to both the server app needs to be login and password protected. 
-35. The users of the client app can either create accounts or use the app in the guest mode.
-35. Each user of the server app has to have a separate login which consists of 4-8 characters (at least one lowercase letter, one uppercase letter, one digit 0-9 and one special character).
-36. The login to the server app cannot include white-space characters and/or Polish diacritics).
-37. The password to the server app has to contain at least 4 characters (at least one lowercase letter, one uppercase letter, one digit 0-9 and one special character).
-38. The password cannot include white-space characters and/or Polish diacritics).
-39. Every user of the client app that chooses to create an account has to create a username, provide their e-mail address and set a password.
-40. The username in the client app cannot exceed 100 characters (white-space characters, Polish diacritics and other special characters found on the keyboard are allowed).
-41. The password in the client app cannot exceed 15 characters.
-42. The password to the client app has to contain at least 6 characters (at least one lowercase letter, one uppercase letter, one digit 0-9).
-43. The password can include one of the following special characters: !@#$%^&*
-44. The password cannot include white-space characters and/or Polish diacritics).
-45. There needs to be a procedure of creating, restoring and unlocking an account.
-46. There needs to be a procedure of changing the password.
-47. The account needs to be blocked after three attempts of entering the wrong password.
-48. The server app has be create a backup of the general report.
-49. MrBuggy3 must be a portable app in a zip archive. The archive has to include the exe file and all the necessary libraries and resources to run it.
-50. The demo app should include one of the two possible tasks/exercises: 
-    * A calculator that can only divide. The defect is that it divides by 0 and shows 0 as the result.
-    * A function that checks if two rectangles intersect and then showing the information. The defect is a wrong information saying that the rectangles do not intersect when one of them completely covers the other.
-51. The defects are scored according to their severity:
-    * trivial defects (1-2 points);
-    * normal defects (3-4 points);
-    * critical defects (4-6 points).
-52. The app deducts 2 points for reporting a correct functionality.
+## Tworzenie wymagań dla aplikacji
+Poniższe informacje posłużyły jako podstawa testów, która pozwoliła mi stworzyć warunki testowe i w rezultacie przypadki testowe.
+1. Aplikacja składa się z aplikacji klienta i aplikacji serwera.
+1. Potrzebne są **trzy** wersje aplikacji klienckiej: demo, finalna i publiczna.
+2. Demo zawiera tylko jedno zadanie, różniące się od zadań dostępnych w wersji ostatecznej i publicznej.
+3. Wersja publiczna zostanie wydana po zakończeniu Pucharu.
+4. Trzy wersje różnią się tylko ilością zadań: 1 dla wersji demonstracyjnej, 15 dla pozostałych dwóch.
+5. Aplikacja musi działać
+   * Windows 7/8/8.1 - aplikacja kliencka;
+   * Windows 7 - aplikacja serwera.
+6. Aplikacja kliencka musi dostarczać dane do aplikacji serwerowej w postaci pliku tekstowego, albo bezpośrednio przez aplikację, albo poprzez wyeksportowanie z aplikacji klienckiej, a następnie zaimportowanie przez aplikację serwerową.
+7. Aplikacja kliencka musi umożliwiać użytkownikom znalezienie jednego defektu w każdym ćwiczeniu/zadaniu i zgłoszenie go.
+8. Aplikacja kliencka musi wygenerować dziennik zdarzeń.
+9. Wszystkie ćwiczenia/zadania muszą być zaimplementowane w aplikacji.
+10. Ćwiczenia/zadania muszą zawierać wady funkcjonalne, użytkowe lub bezpieczeństwa.
+11. Ćwiczenia/zadania muszą być pokazane w losowej kolejności.
+11. Aplikacja kliencka musi działać w dwóch trybach:
+    * drużyna: tryby kapitana i członka drużyny;
+    * indywidualny: tryb gracza.
+15. Zgłaszanie usterek należy zablokować w trybie członka zespołu.
+13. Aplikacja nie może utracić żadnych danych w przypadku nagłej awarii.
+14. Za każdym razem, gdy klikniesz „Zgłoś usterkę”, należy utworzyć kopię zapasową. Kopia zapasowa musi być w formacie tekstowym.
+15. W przypadku utraty połączenia użytkownik powinien nadal mieć możliwość korzystania z aplikacji.
+16. Całe GUI musi być w języku polskim.
+17. Okno aplikacji powinno zostać podzielone na dwie części: „Zadania” (Ćwiczenia/Zadania) oraz „Menu boczne” (Menu boczne).
+18. Menu boczne musi składać się z okienek wyświetlających:
+    * czas pozostały do ​​końca rundy (wersja ostateczna),
+    * nr ćwiczenia/zadania,
+    * „Opis zadania” – opis ćwiczenia/zadania,
+    * „Lista zadań” wykaz zadań/ćwiczeń,
+    * przyciski nawigacyjne: „Następne” (Następny) i „Poprzednie” (Poprzedni),
+    * przycisk „Zaraportuj defekt” (Zgłoś błąd),
+    * Przycisk "Zakończ" (Zakończ).
+19. Okno ćwiczenia/zadania musi pokazywać aktualnie wykonywane ćwiczenie/zadanie.
+20. Okno aplikacji musi zawierać ikonę MrBuggy 3.
+21. „Opis zadania” powinny również zawierać liczbę możliwych do zdobycia punktów.
+22. „Lista zadań” ma umożliwiać nawigację między zadaniami/zadaniami, a także jasno pokazywać aktualne zadanie, zadania bez odpowiedzi oraz te, na które udzielono odpowiedzi.
+23. Przycisk "Zakończ" ma wyeksportować wszystkie odpowiedzi na serwer/plik tekstowy. Tej czynności nie można cofnąć i można ją wykonać tylko raz. Czynność tę należy potwierdzić w osobnym komunikacie.
+24. Aplikacja serwera musi być dostępna z wiersza poleceń lub GUI i jest dedykowana wyłącznie jury turnieju.
+25. Aplikacja serwera musi:
+    * pobrać raporty wszystkich zespołów i użytkowników;
+    * prowadzić tablicę wyników z podziałem na wyniki drużynowe i indywidualne;
+    * automatycznie sprawdza zgłoszone usterki;
+    * zezwolić jury na ręczną zmianę punktacji;
+    * pokaż ogólną rangę na osobnym monitorze;
+    * pozwalają na wygenerowanie raportu zbiorczego zawierającego pozycję użytkownika w rankingu, nazwę użytkownika i jego zespół, liczbę punktów przyznanych za każde zadanie/ćwiczenie wykonane przez każdego członka i zespół oraz sumę punktów zdobytych przez każdy zespół członek i cały zespół;
+29. Rejestruj wszystkie zdarzenia (tj. [nie]pomyślnie odebrany raport lub poprawnie przejrzany raport) w dzienniku serwera.
+30. Czas odpowiedzi interfejsu powinien być krótszy niż 1 sek.
+31. Raport ogólny powinien zostać wygenerowany w czasie poniżej 15 sek.
+32. Kopia zapasowa aplikacji klienckiej nie powinna przekraczać 2 MB.
+33. Aplikacja kliencka nie może używać więcej niż 100 MB pamięci RAM.
+33. Aplikacja serwera musi mieć możliwość odbierania 50 raportów naraz.
+34. Dostęp do aplikacji serwera musi być chroniony loginem i hasłem.
+35. Użytkownicy aplikacji klienckiej mogą tworzyć konta lub korzystać z aplikacji w trybie gościa.
+35. Każdy użytkownik aplikacji serwerowej musi mieć osobny login, który składa się z 4-8 znaków (co najmniej jedna mała litera, jedna wielka litera, jedna cyfra 0-9 i jeden znak specjalny).
+36. Login do aplikacji serwera nie może zawierać spacji i/lub polskich znaków diakrytycznych).
+37. Hasło do aplikacji serwera musi zawierać co najmniej 4 znaki (co najmniej jedną małą literę, jedną dużą literę, jedną cyfrę 0-9 i jeden znak specjalny).
+38. Hasło nie może zawierać spacji i/lub polskich znaków diakrytycznych).
+39. Każdy użytkownik aplikacji klienckiej, który zdecyduje się na utworzenie konta, musi utworzyć nazwę użytkownika, podać swój adres e-mail i ustawić hasło.
+40. Nazwa użytkownika w aplikacji klienckiej nie może przekraczać 100 znaków (dozwolone są białe znaki, polskie znaki diakrytyczne i inne znaki specjalne znajdujące się na klawiaturze).
+41. Hasło w aplikacji klienckiej nie może przekraczać 15 znaków.
+42. Hasło do aplikacji klienckiej musi zawierać co najmniej 6 znaków (co najmniej jedną małą literę, jedną dużą literę, jedną cyfrę 0-9).
+43. Hasło może zawierać jeden z następujących znaków specjalnych: !@#$%^&*
+44. Hasło nie może zawierać spacji i/lub polskich znaków diakrytycznych).
+45. Musi istnieć procedura tworzenia, przywracania i odblokowywania konta.
+46. ​​Konieczna jest procedura zmiany hasła.
+47. Konto należy zablokować po trzech próbach wprowadzenia błędnego hasła.
+48. Aplikacja serwera ma utworzyć kopię zapasową raportu ogólnego.
+49. MrBuggy3 musi być przenośną aplikacją w archiwum zip. Archiwum musi zawierać plik exe oraz wszystkie niezbędne biblioteki i zasoby do jego uruchomienia.
+50. Aplikacja demonstracyjna powinna zawierać jedno z dwóch możliwych zadań/ćwiczeń:
+    * Kalkulator, który może tylko dzielić. Wada polega na tym, że dzieli się przez 0 i jako wynik pokazuje 0.
+    * Funkcja, która sprawdza, czy przecinają się dwa prostokąty, a następnie wyświetla informacje. Wada to błędna informacja mówiąca, że ​​prostokąty nie przecinają się, gdy jeden z nich całkowicie zakrywa drugi.
+51. Wady są punktowane według ich stopnia zaawansowania:
+    * błahe wady (1-2 punkty);
+    * normalne wady (3-4 punkty);
+    * wady krytyczne (4-6 punktów).
+52. Aplikacja odejmuje 2 punkty za zgłoszenie poprawnej funkcjonalności.
